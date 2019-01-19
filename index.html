@@ -1,0 +1,202 @@
+
+<html>
+
+<head>
+<title>Image Move</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.4.2.js"></script>
+<style type="text/css">
+        .post{
+                width: 200px;
+                height: 150px;
+                background-color: gray;
+                display: flex;
+                border: 2px solid red;
+        }
+        .style
+        {
+                width: 250px;
+                height: 250px;
+                background-color: gray;
+                display: flex;
+                border: 1px solid black;
+        }
+        img{
+                width: 150px;
+                height: 150px;
+                margin: 15px;
+        }
+        .rohit
+        {
+                display: flex;
+                flex-wrap: wrap;
+                width: 900px;
+                height: 500px;
+              
+                margin-top: 10px;
+                margin-left: 250px;
+                }
+
+        .btn
+        {
+                width: 150px;
+                height: 40px;
+                color: white;
+                background-color: black;
+                font-weight: bold;
+                font-size: 15px;
+
+        }       
+        .buttn
+        {
+                padding: 15px;
+                margin-top: 10px;
+                margin-left: 250px;
+        }
+</style>
+        
+
+</head>
+
+<body>
+
+        
+
+        
+
+<div class="rohit">
+        <div class="style" id="post"><img src="1.jpg"></div>
+        <div class="style"  id="post1"></div>
+        <div class="style" id="post2"></div>
+        <div class="style" id="post3"></div>
+        <div class="style" id="post4"></div>
+        <div class="style" id="post5"></div>
+
+        
+  
+</div>
+<div class="buttn">
+        <input class="btn" id="move" type="button" value="Change">
+        <input class="btn" id="1move" hidden="hidden" type="button" value="Change">
+        <input class="btn" id="2move" hidden="hidden" type="button" value="Change">
+        <input class="btn" id="3move" hidden="hidden" type="button" value="Change">
+        <input class="btn" id="4move" hidden="hidden" type="button" value="Change">
+        <input class="btn" id="5move" hidden="hidden" type="button" value="Change">
+
+        <p>Move the Image With in The diffent Div</p>
+
+ </div>
+ 
+<script type="text/javascript">
+
+                
+               $(document).ready(function() {
+
+
+                    $("#move").click(function() {
+                                 
+                                $("#post").each(function() {
+
+                                        var image = $(this).children("img");
+
+                                        image.remove();
+
+                                        $("#post1").append(image);
+                                        $("#move").hide();
+                                        $("#1move").show();
+
+
+                                });
+
+                        }); 
+
+
+                        $("#1move").click(function() {
+                                 
+                                $("#post1").each(function() {
+
+                                        var image = $(this).children("img");
+
+                                        image.remove();
+
+                                        $("#post2").append(image);
+                                         $("#1move").hide();
+                                        $("#2move").show();
+                                           
+                                });
+
+                        });
+
+                        $("#2move").click(function() {
+                                 
+                                $("#post2").each(function() {
+
+                                        var image = $(this).children("img");
+
+                                        image.remove();
+
+                                        $("#post3").append(image);
+                                          $("#2move").hide();
+                                        $("#3move").show();
+
+                                });
+
+                        });
+
+                        
+                        $("#3move").click(function() {
+                                 
+                                $("#post3").each(function() {
+
+                                        var image = $(this).children("img");
+
+                                        image.remove();
+
+                                        $("#post4").append(image);
+                                          $("#3move").hide();
+                                        $("#4move").show();
+
+                                });
+
+                        });
+
+                        $("#4move").click(function() {
+                                 
+                                $("#post4").each(function() {
+
+                                        var image = $(this).children("img");
+
+                                        image.remove();
+
+                                        $("#post5").append(image);
+                                          $("#4move").hide();
+                                        $("#5move").show();
+
+                                });
+
+                        });
+
+
+                        $("#5move").click(function() {
+                                 
+                                $("#post5").each(function() {
+
+                                        var image = $(this).children("img");
+
+                                        image.remove();
+
+                                        $("#post").append(image);
+                                          $("#5move").hide();
+                                        $("#move").show();
+
+                                });
+
+                        });
+
+                });
+
+        </script>
+        
+        
+</body>
+
+</html>
